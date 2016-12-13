@@ -132,7 +132,7 @@ class ActionSheet extends Component {
 	}
 
 	render() {
-		const { cancelButtonIndex } = this.props;
+		const { cancelButtonIndex, style } = this.props;
 		const { visible, sheetAnim } = this.state;
 		return (
 			<Modal
@@ -144,7 +144,7 @@ class ActionSheet extends Component {
 				<View style={sheetStyle.wrapper}>
 					<Text style={styles.overlay} onPress={this._cancel}></Text>
 					<Animated.View
-						style={[sheetStyle.bd, {height: this.translateY, transform: [{translateY: sheetAnim}]}]}
+						style={[sheetStyle.bd, {height: this.translateY, transform: [{translateY: sheetAnim}]}, style]}
 					>
 						{this._renderTitle()}
 						<ScrollView
