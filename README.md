@@ -171,18 +171,18 @@ class ExampleB extends React.Component {
         <td>accessible</td>
         <td>Only available for Android</td>
         <td>PropTypes.bool</td>
-        <td></td>
+        <td>true</td>
     </tr>
     <tr>
         <td>accessibilityLabel</td>
         <td>Only available for Android</td>
         <td>PropTypes.string</td>
-        <td></td>
+        <td>actionSheet</td>
     </tr>
     <tr>
         <td>testID</td>
         <td>Only available for Android</td>
         <td>PropTypes.string</td>
-        <td></td>
+        <td>actionSheet</td>
     </tr>
 </table>
