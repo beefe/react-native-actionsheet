@@ -73,11 +73,11 @@ import { ActionSheetCustom as ActionSheet } from 'react-native-actionsheet'
 const CANCEL_INDEX = 0
 const DESTRUCTIVE_INDEX = 4
 
-const options = [ 
-  'Cancel', 
-  'Apple', 
+const options = [
+  'Cancel',
+  'Apple',
   <Text style={{color: 'yellow'}}>Banana</Text>,
-  'Watermelon', 
+  'Watermelon',
   <Text style={{color: 'red'}}>Durian</Text>
 ]
 
@@ -166,5 +166,23 @@ class ExampleB extends React.Component {
         <td></td>
         <td>PropTypes.func</td>
         <td>(index) => {}</td>
+    </tr>
+    <tr>
+        <td>accessible</td>
+        <td>Only available for Android</td>
+        <td>PropTypes.bool</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>accessibilityLabel</td>
+        <td>Only available for Android</td>
+        <td>PropTypes.string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>testID</td>
+        <td>Only available for Android</td>
+        <td>PropTypes.string</td>
+        <td></td>
     </tr>
 </table>
