@@ -1,5 +1,5 @@
 # react-native-actionsheet
-Cross platform ActionSheet. This component implements a custom ActionSheet  and provides the same way to drawing it on the defferent platforms(iOS and Android). Actually, In order to keep the best effect, it still uses the ActionSheetIOS on iOS.
+Cross platform ActionSheet. This component implements a custom ActionSheet  and provides the same way to drawing it on the different platforms(iOS and Android). Actually, in order to keep the best effect, it still uses the ActionSheetIOS on iOS.
 
 <table>
   <tbody>
