@@ -4,7 +4,7 @@ import * as utils from './utils'
 import styles2 from './styles'
 
 const WARN_COLOR = '#FF3B30'
-const MAX_HEIGHT = Dimensions.get('window').height * 0.7
+const MAX_HEIGHT = Dimensions.get('window').height * 0.8
 
 class ActionSheet extends React.Component {
   static defaultProps = {
