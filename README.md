@@ -167,4 +167,10 @@ https://github.com/beefe/react-native-actionsheet/blob/master/lib/options.js
         <td></td>
         <td>{}</td>
     </tr>
+    <tr>
+        <td>position</td>
+        <td>"top" | "bottom"</td>
+        <td>PropTypes.string</td>
+        <td>bottom</td>
+    </tr>
 </table>
