@@ -1,5 +1,6 @@
 # react-native-actionsheet
-Cross platform ActionSheet. This component implements a custom ActionSheet  and provides the same way to drawing it on the defferent platforms(iOS and Android). Actually, In order to keep the best effect, it still uses the ActionSheetIOS on iOS.
+
+Cross platform ActionSheet. This component implements a custom ActionSheet and provides the same way to drawing it on the defferent platforms(iOS and Android). Actually, In order to keep the best effect, it still uses the ActionSheetIOS on iOS.
 
 <table>
   <tbody>
@@ -34,19 +35,20 @@ class Demo extends React.Component {
       <View>
         <Text onPress={this.showActionSheet}>Open ActionSheet</Text>
         <ActionSheet
-          ref={o => this.ActionSheet = o}
+          ref={(o) => (this.ActionSheet = o)}
           title={'Which one do you like ?'}
           options={['Apple', 'Banana', 'cancel']}
           cancelButtonIndex={2}
           destructiveButtonIndex={1}
-          onPress={(index) => { /* do something */ }}
+          onPress={(index) => {
+            /* do something */
+          }}
         />
       </View>
     )
   }
 }
 ```
-
 
 ### Use ActionSheetCustom directly
 
@@ -56,11 +58,11 @@ so you can customize option and title
 import { ActionSheetCustom as ActionSheet } from 'react-native-actionsheet'
 
 const options = [
-  'Cancel', 
-  'Apple', 
-  <Text style={{color: 'yellow'}}>Banana</Text>,
-  'Watermelon', 
-  <Text style={{color: 'red'}}>Durian</Text>
+  'Cancel',
+  'Apple',
+  <Text style={{ color: 'yellow' }}>Banana</Text>,
+  'Watermelon',
+  <Text style={{ color: 'red' }}>Durian</Text>,
 ]
 
 class Demo extends React.Component {
@@ -72,12 +74,18 @@ class Demo extends React.Component {
       <View>
         <Text onPress={this.showActionSheet}>Open ActionSheet</Text>
         <ActionSheet
-          ref={o => this.ActionSheet = o}
-          title={<Text style={{color: '#000', fontSize: 18}}>Which one do you like?</Text>}
+          ref={(o) => (this.ActionSheet = o)}
+          title={
+            <Text style={{ color: '#000', fontSize: 18 }}>
+              Which one do you like?
+            </Text>
+          }
           options={options}
           cancelButtonIndex={0}
           destructiveButtonIndex={4}
-          onPress={(index) => { /* do something */ }}
+          onPress={(index) => {
+            /* do something */
+          }}
         />
       </View>
     )
@@ -166,11 +174,5 @@ https://github.com/beefe/react-native-actionsheet/blob/master/lib/options.js
         <td>only for ActionSheetCustom</td>
         <td></td>
         <td>{}</td>
-    </tr>
-    <tr>
-        <td>position</td>
-        <td>"top" | "bottom"</td>
-        <td>PropTypes.string</td>
-        <td>bottom</td>
     </tr>
 </table>
