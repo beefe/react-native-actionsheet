@@ -1,3 +1,5 @@
+# This project is a fork of the project: [react-native-actionsheet](https://github.com/beefe/react-native-actionsheet) . With the changes to accept test id props for your automation. I open a pr to put this in the original lib, but I had no response, follow the link to see the pr: https://github.com/beefe/react-native-actionsheet/pull/159/files
+
 # react-native-actionsheet
 Cross platform ActionSheet. This component implements a custom ActionSheet  and provides the same way to drawing it on the defferent platforms(iOS and Android). Actually, In order to keep the best effect, it still uses the ActionSheetIOS on iOS.
 
@@ -17,7 +19,7 @@ Cross platform ActionSheet. This component implements a custom ActionSheet  and 
 ## Install
 
 ```
-npm install react-native-actionsheet --save
+npm i @henriquealbertbill/react-native-actionsheet
 ```
 
 ## Usage
@@ -39,6 +41,8 @@ class Demo extends React.Component {
           options={['Apple', 'Banana', 'cancel']}
           cancelButtonIndex={2}
           destructiveButtonIndex={1}
+          testID={'testIdNameHere'}
+          accessibilityLabel={'accessibilityLabelNameHere'}
           onPress={(index) => { /* do something */ }}
         />
       </View>
@@ -53,7 +57,7 @@ class Demo extends React.Component {
 so you can customize option and title
 
 ```js
-import { ActionSheetCustom as ActionSheet } from 'react-native-actionsheet'
+import { ActionSheetCustom as ActionSheet } from '@henriquealbertbill/react-native-actionsheet'
 
 const options = [
   'Cancel', 
@@ -166,5 +170,17 @@ https://github.com/beefe/react-native-actionsheet/blob/master/lib/options.js
         <td>only for ActionSheetCustom</td>
         <td></td>
         <td>{}</td>
+    </tr>
+        <tr>
+        <td>testID</td>
+        <td></td>
+        <td>PropTypes.string or PropTypes.element</td>
+        <td></td>
+    </tr>
+        <tr>
+        <td>accessibilityLabel</td>
+        <td></td>
+        <td>PropTypes.string or PropTypes.element</td>
+        <td></td>
     </tr>
 </table>
