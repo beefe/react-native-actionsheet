@@ -35,7 +35,7 @@ const Demo = () => {
 
   return (
     <View>
-      <Text onPress={this.showActionSheet}>Open ActionSheet</Text>
+      <Text onPress={showActionSheet}>Open ActionSheet</Text>
       <ActionSheet
         ref={actionSheetRef}
         title={"Which one do you like ?"}
@@ -77,7 +77,7 @@ const Demp = () => {
 
   return (
     <View>
-      <Text onPress={this.showActionSheet}>Open ActionSheet</Text>
+      <Text onPress={showActionSheet}>Open ActionSheet</Text>
       <ActionSheet
         ref={actionSheetRef}
         title={
