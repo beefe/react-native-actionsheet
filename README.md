@@ -23,28 +23,33 @@ npm install react-native-actionsheet --save
 ## Usage
 
 ```js
-import ActionSheet from 'react-native-actionsheet'
+import ActionSheet from "react-native-actionsheet";
+import { useRef } from "react";
 
-class Demo extends React.Component {
+const Demo = () => {
+  const actionSheetRef = useRef();
+
   showActionSheet = () => {
-    this.ActionSheet.show()
-  }
-  render() {
-    return (
-      <View>
-        <Text onPress={this.showActionSheet}>Open ActionSheet</Text>
-        <ActionSheet
-          ref={o => this.ActionSheet = o}
-          title={'Which one do you like ?'}
-          options={['Apple', 'Banana', 'cancel']}
-          cancelButtonIndex={2}
-          destructiveButtonIndex={1}
-          onPress={(index) => { /* do something */ }}
-        />
-      </View>
-    )
-  }
-}
+    actionSheetRef.current.show();
+  };
+
+  return (
+    <View>
+      <Text onPress={showActionSheet}>Open ActionSheet</Text>
+      <ActionSheet
+        ref={actionSheetRef}
+        title={"Which one do you like ?"}
+        options={["Apple", "Banana", "cancel"]}
+        cancelButtonIndex={2}
+        destructiveButtonIndex={1}
+        onPress={(index) => {
+          /* do something */
+        }}
+      />
+    </View>
+  );
+};
+
 ```
 
 
@@ -63,26 +68,34 @@ const options = [
   <Text style={{color: 'red'}}>Durian</Text>
 ]
 
-class Demo extends React.Component {
+const Demp = () => {
+  const actionSheetRef = useRef();
+  
   showActionSheet = () => {
-    this.ActionSheet.show()
-  }
-  render() {
-    return (
-      <View>
-        <Text onPress={this.showActionSheet}>Open ActionSheet</Text>
-        <ActionSheet
-          ref={o => this.ActionSheet = o}
-          title={<Text style={{color: '#000', fontSize: 18}}>Which one do you like?</Text>}
-          options={options}
-          cancelButtonIndex={0}
-          destructiveButtonIndex={4}
-          onPress={(index) => { /* do something */ }}
-        />
-      </View>
-    )
-  }
-}
+    actionSheetRef.current.show();
+  };
+
+  return (
+    <View>
+      <Text onPress={showActionSheet}>Open ActionSheet</Text>
+      <ActionSheet
+        ref={actionSheetRef}
+        title={
+          <Text style={{ color: "#000", fontSize: 18 }}>
+            Which one do you like?
+          </Text>
+        }
+        options={options}
+        cancelButtonIndex={0}
+        destructiveButtonIndex={4}
+        onPress={(index) => {
+          /* do something */
+        }}
+      />
+    </View>
+  );
+};
+
 ```
 
 ### How to redesign style ?
